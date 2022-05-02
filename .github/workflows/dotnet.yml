@@ -27,3 +27,11 @@ jobs:
     
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal --filter "Category!=LongRunning"
+    - name: ZIP built application     
+      run: |
+        cd ./publish
+        zip -r ${{ env.ZIP_FILE }} .
+        mv ./${{ env.ZIP_FILE }} ../
+        cd ../          
+      env:  
+               ZIP_FILE: "versity"
