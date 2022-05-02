@@ -32,7 +32,7 @@ jobs:
         run: cd versity; dotnet restore; dotnet publish -r linux-x64 --configuration "Release" --self-contained "true" -o ../site;
 
       - name: Generate deployment package 
-        run: zip -r versity.zip *.json
+        run: zip -r headversity_devops.zip *.json
         
       - name: Beanstalk Deploy
         uses: einaregilsson/beanstalk-deploy@v4
