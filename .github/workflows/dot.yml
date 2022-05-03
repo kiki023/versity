@@ -43,4 +43,4 @@ jobs:
           application_name: versity
           environment_name: versity-env
           version_label: ${{ github.run_id }}
-          deployment_package: BanklyInterviewTest.zip
+          deployment_package: versity.zip
